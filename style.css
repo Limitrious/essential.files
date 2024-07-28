@@ -6,6 +6,7 @@ body {
     height: 100vh;
     margin: 0;
     background-color: #f0f0f0;
+    position: relative; /* Make body relative for absolute positioning inside it */
 }
 
 .content {
@@ -35,6 +36,23 @@ body {
     content: ' <';
     position: absolute;
     right: 0;
+}
+
+.source-link {
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px 20px;
+    position: absolute; 
+    bottom: 10px; 
+    left: 10px;
+}
+
+.source-link::before {
+    content: '<< ';
+    position: absolute;
+    left: 0;
 }
 
 .heading {
