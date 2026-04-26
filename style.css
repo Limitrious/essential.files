@@ -20,13 +20,21 @@ body.dark {
     --card-border: rgba(255, 255, 255, 0.08);
 }
 
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+}
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     background: var(--bg);
     color: var(--text);
     margin: 0;
     padding: 0;
-    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     line-height: 1.5;
     font-size: 13px;
     font-weight: 400;
@@ -34,16 +42,16 @@ body {
 }
 
 .content {
+    width: 100%;
     max-width: 680px;
-    margin: 0 auto;
-    padding: 160px 23px 160px;
+    padding: clamp(16px, 4vw, 40px) 23px;
 }
 
 h1 {
-    font-size: 60px;
+    font-size: clamp(28px, 6vw, 60px);
     font-weight: 300;
-    line-height: 72px;
-    margin-bottom: 53px;
+    line-height: 1.2;
+    margin-bottom: clamp(20px, 3vh, 53px);
     letter-spacing: -0.02em;
 }
 
@@ -61,7 +69,7 @@ h1 {
     display: flex;
     align-items: center;
     min-height: 28px;
-    margin: 23px 0;
+    margin: clamp(10px, 1.8vh, 23px) 0;
     flex-wrap: wrap;
     gap: 12px;
 }
@@ -94,9 +102,7 @@ a.value:hover {
     background: var(--light-bg);
     color: var(--text);
     padding: 8px 12px;
-    border-radius: 2px;
-    font-size: 13px;
-    cursor: pointer;
+    border-radius: 4px;
     user-select: none;
     transition: all 0.15s;
     border: 1px solid var(--card-border);
@@ -112,7 +118,7 @@ a.value:hover {
 }
 
 .back {
-    margin-top: 53px;
+    margin-top: clamp(20px, 3vh, 53px);
 }
 
 .back-link {
@@ -163,7 +169,7 @@ a.value:hover {
     font-size: 16px;
     width: 32px;
     height: 32px;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -180,15 +186,6 @@ a.value:hover {
 
 /* Responsive */
 @media (max-width: 787px) {
-    .content {
-        padding: 80px 23px 120px;
-    }
-
-    h1 {
-        font-size: 42px;
-        line-height: 50px;
-    }
-
     .label {
         width: 100%;
     }
