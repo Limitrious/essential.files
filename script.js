@@ -1,3 +1,16 @@
+// Theme persistence
+(function () {
+    if (localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("dark");
+    }
+})();
+
+function toggleTheme() {
+    const isDark = document.body.classList.toggle("dark");
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+}
+
+// DateTime
 function updateDateTime() {
     const el = document.getElementById("datetime");
     const now = new Date();
@@ -11,10 +24,7 @@ function updateDateTime() {
     const seconds = String(now.getSeconds()).padStart(2, "0");
     const milliseconds = String(Math.floor(now.getMilliseconds() / 10)).padStart(2, "0");
 
-    const date = `${day} ${month} ${year}`;
-    const time = `${hours}:${minutes}:${seconds}:${milliseconds}`;
-
-    el.textContent = `${date} ${time}`;
+    el.textContent = `${day} ${month} ${year} ${hours}:${minutes}:${seconds}:${milliseconds}`;
 }
 
 setInterval(updateDateTime, 50);

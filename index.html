@@ -10,43 +10,51 @@
 
 <body>
 
+    <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Toggle dark mode">
+        <span id="themeIcon">◐</span>
+    </button>
+
     <div class="content">
 
         <h1>ESSENTIAL FILES</h1>
 
-        <div class="row">
-            <span class="label">cs2 cfg</span>
-            <a class="value" href="autoexec.cfg" download>autoexec.cfg</a>
-        </div>
+        <div class="card">
 
-        <div class="row">
-            <span class="label">cs2 launch option</span>
-            <code class="code-block" onmousedown="startFade(this)" onmouseup="copyCode(this)"
-                data-code="+exec autoexec.cfg -novid -high -nojoy -fullscreen">
-            +exec autoexec.cfg -novid -high -nojoy -fullscreen
-        </code>
-        </div>
+            <div class="row">
+                <span class="label">cs2 cfg</span>
+                <a class="value" href="autoexec.cfg" download>autoexec.cfg</a>
+            </div>
 
-        <div class="row">
-            <span class="label">vibranceGUI</span>
-            <a class="value" href="vibranceGUI.exe" download>vibranceGUI.exe</a>
-        </div>
+            <div class="row">
+                <span class="label">cs2 launch option</span>
+                <code class="code-block" onmousedown="startFade(this)" onmouseup="copyCode(this)"
+                    data-code="+exec autoexec.cfg -novid -high -nojoy -fullscreen">
+                +exec autoexec.cfg -novid -high -nojoy -fullscreen
+            </code>
+            </div>
 
-        <div class="row">
-            <span class="label">rawaccel</span>
-            <a class="value" href="RawAccel.zip" download>RawAccel.zip</a>
-        </div>
+            <div class="row">
+                <span class="label">vibranceGUI</span>
+                <a class="value" href="vibranceGUI.exe" download>vibranceGUI.exe</a>
+            </div>
 
-        <div class="row">
-            <span class="label">openasar</span>
-            <a class="value" href="openasar_installer_stable.bat" download>openasar_installer_stable.bat</a>
-        </div>
+            <div class="row">
+                <span class="label">rawaccel</span>
+                <a class="value" href="RawAccel.zip" download>RawAccel.zip</a>
+            </div>
 
-        <div class="row">
-            <span class="label">nvidia broadcast</span>
-            <a class="value"
-                href="https://international.download.nvidia.com/Windows/broadcast/1.4.0.29/NVIDIA_Broadcast_v1.4.0.29.exe"
-                download>NVIDIA_Broadcast.exe</a>
+            <div class="row">
+                <span class="label">openasar</span>
+                <a class="value" href="openasar_installer_stable.bat" download>openasar_installer_stable.bat</a>
+            </div>
+
+            <div class="row">
+                <span class="label">nvidia broadcast</span>
+                <a class="value"
+                    href="https://international.download.nvidia.com/Windows/broadcast/1.4.0.29/NVIDIA_Broadcast_v1.4.0.29.exe"
+                    download>NVIDIA_Broadcast.exe</a>
+            </div>
+
         </div>
 
         <div class="back">
