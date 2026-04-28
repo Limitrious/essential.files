@@ -1,6 +1,7 @@
 // Theme persistence
 (function () {
-    if (localStorage.getItem("theme") === "dark") {
+    const saved = localStorage.getItem("theme");
+    if (saved === "dark" || saved === null) {
         document.body.classList.add("dark");
     }
 })();
