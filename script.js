@@ -40,6 +40,7 @@ function copyCode(el) {
 
     navigator.clipboard.writeText(code)
         .then(() => {
+            showCopyPopup(el);
             setTimeout(() => {
                 el.classList.remove("fading");
             }, 200);
@@ -48,4 +49,17 @@ function copyCode(el) {
             console.error("Copy failed:", err);
             el.classList.remove("fading");
         });
+}
+
+function showCopyPopup(el) {
+    let popup = el.querySelector(".copy-popup");
+    if (!popup) {
+        popup = document.createElement("span");
+        popup.className = "copy-popup";
+        popup.textContent = "Copied!";
+        el.appendChild(popup);
+    }
+    popup.classList.add("show");
+    clearTimeout(popup._hideTimer);
+    popup._hideTimer = setTimeout(() => popup.classList.remove("show"), 1200);
 }
