@@ -82,7 +82,6 @@ h1 {
     letter-spacing: -0.02em;
 }
 
-/* Opaque card box */
 .card {
     background: var(--card-bg);
     border: 1px solid var(--card-border);
@@ -207,7 +206,6 @@ a.value:hover {
     transition: color 0.2s;
 }
 
-/* Dark mode toggle */
 .theme-toggle {
     position: fixed;
     top: 23px;
@@ -233,7 +231,6 @@ a.value:hover {
     border-color: var(--text-secondary);
 }
 
-/* Copy popup — anchored to code-block, no layout shift */
 .code-block {
     position: relative;
 }
@@ -269,7 +266,6 @@ a.value:hover {
     transform: translateY(0);
 }
 
-/* Responsive */
 @media (max-width: 787px) {
     .label {
         width: 100%;
